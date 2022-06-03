@@ -1,0 +1,30 @@
+wandb:
+  name: "base model"
+  project: CIFAR10
+epochs: 100
+batch_size: 128
+optimizer: adam
+metrics: [accuracy]
+data_dir: datasets
+dataset: cifar10
+callbacks:
+  EarlyStopping:
+    min_delta: 0
+    patience: 10
+    verbose: 1
+    restore_best_weights: True
+
+  ReduceLROnPlateau:
+    monitor: val_loss
+    factor: 0.2
+    patience: 3
+    verbose: 1
+    min_delta: 0.0001
+
+  WandbCallback:
+    monitor: val_loss
+    save_model: True
+    log_weights: True
+    save_graph: True
+n_classes: 10
+img_size: [32, 32]

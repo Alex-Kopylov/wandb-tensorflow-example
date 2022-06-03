@@ -1,0 +1,6 @@
+tensorflow
+tensorflow_datasets
+pyaml
+wandb
+albumentations
+matplotlib

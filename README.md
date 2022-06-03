@@ -1,2 +1,6 @@
-# wandb-tensorflow-example
-Wandb + TensorFlow for image classification cifar10
+# Training
+
+```bash
+docker compose up
+```
+

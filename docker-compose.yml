@@ -1,0 +1,15 @@
+version: "2.3"
+services:
+  cifar10:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+              - gpu
+    shm_size: "6gb"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
