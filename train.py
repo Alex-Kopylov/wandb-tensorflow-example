@@ -1,5 +1,4 @@
 import wandb
-wandb.login(key=open('secrets/wandb_key.txt', 'r').read())
 
 import tensorflow as tf
 import tensorflow_datasets as tfds
@@ -13,14 +12,9 @@ from visualization import log_image_artifacts_to_wandb
 from model import build_model
 from preprocessing import preprocess
 
-tf.random.set_seed(42)
 
-def train():
-    config = yaml.safe_load(open('configs/config.yaml', 'r'))
-    wandb.init(project=config['wandb']['project'], 
-               name=config['wandb']['name'],
-               config=config)
-    
+def train(config):
+
     (train_img, val_img, test_img), metadata = tfds.load(
         config['dataset'],
         data_dir = config['data_dir'],
@@ -51,5 +45,14 @@ def train():
                         callbacks=callbacks)
 
 if __name__ == '__main__':
-    train()
+    tf.random.set_seed(42)
+
+    wandb.login(key=open('secrets/wandb_key.txt', 'r').read())
+    config = yaml.safe_load(open('configs/config.yaml', 'r'))
+    wandb.init(project=config['wandb']['project'],
+               name=config['wandb']['name'],
+               config=config)
+
+    train(config)
+
     wandb.finish()
