@@ -72,9 +72,7 @@ wandb==0.12.17
    git clone https://github.com/Alex-Kopylov/wandb-tensorflow-example.git
    ```
 2. Setup your environment. You have several options:
-   ```sh
-   pip install -r requirements.txt
-   ```
+
 
 <a href="https://docs.docker.com/compose/">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker Logo" height="100">
