@@ -49,10 +49,13 @@ It also uses Docker and Docker Compose. And runs on GPU and CPU as well.
 ### Dependencies
 
 **1. Python**
-* tensorflow==2.9.1
-* tensorflow_datasets==4.6.0
-* PyYAML==6.0
-* wandb==0.12.17 
+
+```
+tensorflow==2.9.1
+tensorflow_datasets==4.6.0
+PyYAML==6.0
+wandb==0.12.17
+```
 
 **2. wandb account** for tracking your experiments.
 
