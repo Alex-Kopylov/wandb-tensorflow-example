@@ -1,5 +1,4 @@
 tensorflow==2.9.1
-tensorflow_datasets
-pyaml
-wandb
-matplotlib
+tensorflow_datasets==4.6.0
+PyYAML==6.0
+wandb==0.12.17
