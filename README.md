@@ -94,3 +94,15 @@ You can use Conda or default Python virtual environment.
   conda activate wandb-tensorflow
   pip install -r requirements.txt
   ```
+
+### Hints
+1. For dry run: 
+```shell
+$ wandb disabled
+``` 
+```shell
+$ export WANDB_MODE=disabled
+```
+```python
+wandb.init(mode="disabled")
+```

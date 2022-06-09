@@ -1,12 +1,26 @@
 wandb:
   name: "base model"
   project: CIFAR10
+
+random_seed: 42
+n_classes: 10
+one_hot: true
+img_shape: [32, 32]
+# dataset
+dataset:
+  name: cifar10
+  data_dir: datasets
+  split:
+    train: "train[:80%]"
+    val: "train[80%:]"
+    test: "test"
+
+# train
 epochs: 100
 batch_size: 128
 optimizer: adam
 metrics: [accuracy]
-data_dir: datasets
-dataset: cifar10
+
 callbacks:
   EarlyStopping:
     min_delta: 0
@@ -26,5 +40,3 @@ callbacks:
     save_model: True
     log_weights: True
     save_graph: True
-n_classes: 10
-img_size: [32, 32]
