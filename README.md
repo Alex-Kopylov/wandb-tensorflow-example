@@ -55,8 +55,10 @@ It also uses Docker and Docker Compose. And runs on GPU and CPU as well.
 ```
 tensorflow==2.9.1
 tensorflow_datasets==4.6.0
-PyYAML==6.0
-wandb==0.12.17
+keras-cv==0.2.6
+PyYAML>=6.0
+wandb>=0.12.17
+matplotlib>=3.5.2
 ```
 
 **2. wandb account** for tracking your experiments.
