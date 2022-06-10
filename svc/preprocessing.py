@@ -2,7 +2,6 @@ from functools import partial
 
 import tensorflow as tf
 from tensorflow.data.experimental import AUTOTUNE
-from svc.data_tests import verify_shape
 
 
 def encode_labels(image, label, n_classes):
