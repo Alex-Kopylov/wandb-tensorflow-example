@@ -35,6 +35,8 @@
 
 It is a simple example demonstrates how to use the [Wandb](https://wandb.ai) API to monitor and analyze your Machine Learning projects.
 
+Wandb page of this project: https://wandb.ai/anon234523452346/CIFAR10
+
 With free Wandb account you will have a 100 GB of cloud storage for your logs, models, artifacts, and other data.
 
 It also uses Docker and Docker Compose. And runs on GPU and CPU as well.
