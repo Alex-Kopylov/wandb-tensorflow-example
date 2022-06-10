@@ -83,6 +83,7 @@ wandb==0.12.17
 Docker is preferable for further integration in complex CI\/CD pipelines.
 ```sh
   docker compose build
+  docker compose up
   ```
 
 <a href="https://docs.conda.io/en/latest/">
